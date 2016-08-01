@@ -19,6 +19,7 @@ export default Ember.Route.extend({
     },
 
     error (reason) {
+      console.log("reason is ", reason);
       let unauthorized = reason.errors.some((error) =>
         error.status === '401'
       );
