@@ -1,0 +1,9 @@
+{{#each recipes as |recipe|}}
+<div class="recipe-card col-xs-3">
+  <img class="browse-recipe-image" src= {{recipe.image}} >
+  <h5>{{recipe.title}}</h5>
+  <p>{{recipe.time}}</p>
+  <p>{{recipe.level}}</p>
+  {{favorite-star recipes=recipes favorite="favorite"}}
+</div>
+{{/each}}

@@ -12,6 +12,13 @@ Router.map(function () {
   this.route('users');
   this.route('profiles');
   this.route('recipes');
+
+  this.route('profile', {path: '/profiles/:id'});
+  this.route('favorites');
+  this.route('recipe', {path: '/recipes/:id'});
+  this.route('favorite', {path: '/favorites/:id'});
+  this.route('schedule');
+  this.route('schedules');
 });
 
 export default Router;

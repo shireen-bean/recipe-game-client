@@ -1,9 +1,10 @@
 import DS from 'ember-data';
+import { hasMany } from 'ember-data/relationships';
+import { belongsTo } from 'ember-data/relationships';
 
 export default DS.Model.extend({
   given_name: DS.attr('string'),
-  user_id: DS.belongsTo('user'),
+  user: DS.belongsTo('user'),
   level: DS.attr('number'),
-  // favorites: DS.hasMany('favorite'),
-  // schedules: DS.hasMany('schedule'),
+  recipes: DS.hasMany('recipe')
 });

@@ -1,6 +1,8 @@
 <h2>Profiles</h2>
 
 <ul>
-  <li>{{model.given_name}}</li>
-  <li>{{model.level}}</li>
+  {{#each model as |profile|}}
+    <li>{{profile.given_name}}</li>
+    <li>{{profile.level}}</li>
+  {{/each}}
 </ul>
