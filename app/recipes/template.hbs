@@ -1,10 +1,12 @@
 <h3>Recipes</h3>
 
-<ul>
+
 {{#each model as |recipe|}}
-  <li>{{recipe.title}}</li>
-  <li>{{recipe.time}}</li>
-  <li>{{recipe.ingredients}}</li>
-  <li>{{recipe.direction}}</li>
+<div class="recipe-card col-xs-3">
+  <img class="browse-recipe-image" src= {{recipe.image}} >
+  <h5>{{recipe.title}}</h5>
+  <p>{{recipe.time}}</p>
+  <p>{{recipe.level}}</p>
+  {{favorite-star recipe=recipe favorite="favorite"}}
+</div>
 {{/each}}
-</ul>

@@ -1,0 +1,17 @@
+// .recipe-card {
+//   & img {
+//     width:100%;
+//   }
+// }
+
+
+.recipe-card {
+  height: 300px;
+  & .browse-recipe-image {
+    width: 100%;
+  }
+}
+//
+// .browse-recipe-image {
+//   width: 100%;
+// }
