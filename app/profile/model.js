@@ -6,5 +6,5 @@ export default DS.Model.extend({
   given_name: DS.attr('string'),
   user: DS.belongsTo('user'),
   level: DS.attr('number'),
-  recipes: DS.hasMany('recipe')
+  recipes: DS.hasMany('recipe'),
 });

@@ -1,7 +1,9 @@
-<button>{{#link-to 'recipes'}}Back{{/link-to}}</button>
+<div class='view-recipe'>
+<button class='back back-to-recipes'>{{#link-to 'recipes'}}Back{{/link-to}}</button>
 
-{{model.image}}
-{{model.title}}
-{{model.time}}
-{{model.ingredients}}
-{{model.directions}}
+<img class='view-recipe-image' src= {{model.image}}>
+<h3>{{model.title}}</h3>
+<p>{{model.time}}</p>
+<p>{{model.ingredients}}</p>
+<p>{{model.directions}}</p>
+</div>
