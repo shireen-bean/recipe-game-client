@@ -4,5 +4,9 @@
   {{#each model as |profile|}}
     <li>{{profile.given_name}}</li>
     <li>{{profile.level}}</li>
+    <li>{{#each profile.recipes as |meal|}}
+        <p>{{meal.title}}</p>
+        {{/each}}
+    </li>
   {{/each}}
 </ul>
