@@ -5,4 +5,13 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('profile');
   },
+
+  actions: {
+
+    edit (profile) {
+      this.transitionTo('profiles/edit', profile)
+    },
+
+
+  },
 });

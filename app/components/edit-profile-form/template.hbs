@@ -1,0 +1,25 @@
+<h4>Editing Profile {{model.id}} </h4>
+
+<form {{action "submit" on="submit"}}>
+  {{input type="text"
+          class="form-control"
+          id="profile-name"
+          placeholder="Name"
+          value=profile.given_name}}
+
+  <!-- {{input type="text"
+          class="form-control"
+          id="profile-image"
+          placeholder="Profile Image"
+          value=profile_image}} -->
+
+
+</form>
+
+<!-- <button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Save Changes
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button> -->

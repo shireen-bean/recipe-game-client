@@ -2,11 +2,21 @@
 
 <ul>
   {{#each model as |profile|}}
+    <li>{{profile.id}}</li>
     <li>{{profile.given_name}}</li>
     <li>{{profile.level}}</li>
     <li>{{#each profile.recipes as |meal|}}
         <p>{{meal.title}}</p>
         {{/each}}
     </li>
-  {{/each}}
+    
+    {{profile/edit-profile profile=profile
+                           edit='edit'
+                                          }}
+    {{/each}}
+
+
+    <!-- {{#each model as |profile|}}
+      {{edit-profile-form profile=profile edit='edit' }}
+    {{/each}} -->
 </ul>

@@ -8,16 +8,16 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    favorite (recipe) {
-      return this.get('ajax').post('/favorites', {
-        data: {
-          favorite: {
-            profile_id: this.get('auth.credentials.id'),
-            recipe_id: recipe,
-          },
-        },
-      });
-    },
+    // favorite (recipe) {
+    //   return this.get('ajax').post('/favorites', {
+    //     data: {
+    //       favorite: {
+    //         profile_id: this.get('auth.credentials.id'),
+    //         recipe_id: recipe,
+    //       },
+    //     },
+    //   });
+    // },
 
 
 
