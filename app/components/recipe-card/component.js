@@ -5,5 +5,5 @@ export default Ember.Component.extend({
   //   favorite (recipe) {
   //     this.sendAction('favorite',recipe);
   //   }
-  }
+  // }
 });
