@@ -2,6 +2,9 @@
 
 {{#each model as |sched|}}
 <ul>
-  <li>{{sched.id}}</li>
+  <li>{{sched.recipe.id}}</li>
 </ul>
+
 {{/each}}
+
+{{profile-meal schedule=model cook="cook"}}

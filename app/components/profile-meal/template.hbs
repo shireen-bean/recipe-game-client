@@ -1,14 +1,14 @@
-{{#each recipe as |recipe|}}
+{{#each schedule as |schedule|}}
 
 <div class="card profile-meal-card col-xs-4">
-  <img class="card-img-top" src={{recipe.image}} alt="Card image cap">
+  <img class="card-img-top" src= {{schedule.recipe.image}} alt="Card image cap">
   <div class="card-block">
-    <h4 class="card-title">{{recipe.title}}</h4>
+    <h4 class="card-title">{{schedule.recipe.title}}</h4>
     <p class="card-text">5 points</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"> {{cook/cook-start
-                                    recipe=recipe
+                                    schedule=schedule
                                     cook='cook'
                                   }}
     </li>

@@ -12,8 +12,8 @@ export default Ember.Route.extend({
       this.transitionTo('profiles/edit', profile)
     },
 
-    cook (recipe) {
-      this.transitionTo('recipes/cook', recipe)
+    cook (schedule) {
+      this.transitionTo('schedule', schedule.id)
     }
 
 
