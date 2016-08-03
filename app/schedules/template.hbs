@@ -1,1 +1,7 @@
 <h5>This is the Schedules page</h5>
+
+{{#each model as |sched|}}
+<ul>
+  <li>{{sched.id}}</li>
+</ul>
+{{/each}}
