@@ -1,3 +1,10 @@
 .recipe-card{
   border: 2px solid red;
 }
+
+.profile-meal-card {
+  border: 3px solid blue;
+  & img {
+    border: none;
+  }
+}

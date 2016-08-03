@@ -23,3 +23,10 @@
     margin: 0 auto;
   }
 }
+
+.profile-meal-card {
+  height: 500px;
+  & img {
+    width: 100%;
+  }
+}

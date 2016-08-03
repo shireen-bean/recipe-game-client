@@ -6,14 +6,15 @@
     <li>{{profile.level}}</li>
     <li>{{#each profile.recipes as |meal|}}
         <p>{{meal.title}}</p>
+        <h5>Your Meals</h5>
+        {{profile-meal}}
         {{/each}}
+        {{profile-meal recipe=profile.recipes}}
     </li>
+
 
     {{profile/edit-profile profile=profile
                            edit='edit'
                                           }}
-    <!-- {{#each model as |profile|}}
-      {{edit-profile-form profile=profile edit='edit' }}
-    {{/each}} -->
 </ul>
 {{/each}}

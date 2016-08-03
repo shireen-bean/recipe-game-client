@@ -1,0 +1,15 @@
+{{#each recipe as |recipe|}}
+
+<div class="card profile-meal-card col-xs-4">
+  <img class="card-img-top" src={{recipe.image}} alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">{{recipe.title}}</h4>
+    <p class="card-text">5 points</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Let's Cook</li>
+    <li class="list-group-item">Favorite</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div>
+{{/each}}
