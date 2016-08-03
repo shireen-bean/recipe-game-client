@@ -1,7 +1,6 @@
-<h2>Profiles</h2>
-
+{{#each model as |profile|}}
+<h2>Hi {{profile.given_name}}</h2>
 <ul>
-  {{#each model as |profile|}}
     <li>{{profile.id}}</li>
     <li>{{profile.given_name}}</li>
     <li>{{profile.level}}</li>
@@ -9,14 +8,12 @@
         <p>{{meal.title}}</p>
         {{/each}}
     </li>
-    
+
     {{profile/edit-profile profile=profile
                            edit='edit'
                                           }}
-    {{/each}}
-
-
     <!-- {{#each model as |profile|}}
       {{edit-profile-form profile=profile edit='edit' }}
     {{/each}} -->
 </ul>
+{{/each}}

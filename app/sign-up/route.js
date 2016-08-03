@@ -9,13 +9,18 @@ export default Ember.Route.extend({
     signUp (credentials) {
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
-      .then(() => this.get('ajax').post('/profiles', {
+      .finally(() => {
+        this.get('ajax').post('/profiles', {
         data: {
           profile: {
             user_id: this.get('auth.credentials.id'),
+            given_name: this.get('auth.credentials.givenname'),
           },
         },
-      }))
+      }
+    )
+    console.log('profile created')
+    })
       .then(() => this.transitionTo('application'))
       .then(() => {
         this.get('flashMessages')
@@ -28,3 +33,6 @@ export default Ember.Route.extend({
     },
   },
 });
+
+
+// delete

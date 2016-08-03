@@ -7,18 +7,22 @@ export default Ember.Service.extend({
   isAuthenticated: Ember.computed.bool('credentials.token'),
 
   signUp (credentials) {
+    console.log("first name before sign up"+ credentials.givenname);
     return this.get('ajax').post('/sign-up', {
       data: {
         credentials: {
           email: credentials.email,
           password: credentials.password,
           password_confirmation: credentials.passwordConfirmation,
+          givenname: credentials.givenname,
+          lastname: credentials.lastname,
         },
       },
     });
   },
 
   signIn (credentials) {
+
     return this.get('ajax').post('/sign-in', {
       data: {
         credentials: {
@@ -31,7 +35,11 @@ export default Ember.Service.extend({
       this.get('credentials').set('id', result.user.id);
       this.get('credentials').set('email', result.user.email);
       this.get('credentials').set('token', result.user.token);
+      this.get('credentials').set('givenname', result.user.givenname);
+      this.get('credentials').set('lastname', result.user.lastname);
+      console.log("first name after "+ credentials.givenname);
     });
+    // .then(()=>console.log(this.get('credentials')));
   },
 
   changePassword (passwords) {

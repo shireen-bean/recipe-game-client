@@ -1,3 +1,20 @@
+<!-- <label style="font-weight:300; margin-top:10px;">First Name</label>
+{{input type="text"
+        id="firstname"
+        required="true"
+        placeholder="First Name"
+        value=credentials.given_name}} -->
+
+<!-- <label for="last-name" style="font-weight:300; margin-top:10px;">Last Name</label>
+{{input type="text"
+        id="lastName"
+        required="true"
+        placeholder="Last Name"
+        value=credentials.last_name}} -->
+
+
+{{firstname-input givenname=credentials.givenname}}
+{{lastname-input lastname=credentials.lastname}}
 {{email-input email=credentials.email}}
 {{password-input password=credentials.password}}
 {{password-confirmation-input password=credentials.passwordConfirmation}}

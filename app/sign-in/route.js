@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     signIn (credentials) {
       return this.get('auth').signIn(credentials)
-      .then(() => this.transitionTo('recipes'))
+      .then(() => this.transitionTo('application'))
       .then(() => this.get('flashMessages').success('Thanks for signing in!'))
       .catch(() => {
         this.get('flashMessages')
