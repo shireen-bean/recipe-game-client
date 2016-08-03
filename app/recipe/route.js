@@ -23,19 +23,16 @@ export default Ember.Route.extend({
     add (recipe, profile) {
       console.log("recipe to add is", recipe);
       console.log("profile to add is",profile);
-
-      // let profile_id = this.get('profile_object.id')
-      // console.log("The profile id is" + profile_id)
-    //   return this.get('ajax').post('/schedules', {
-    //     data: {
-    //       schedule: {
-    //         profile_id: 15,
-    //         recipe_id: 4,
-    //       },
-    //     },
-    //   }
-    // );
-    }
+      return this.get('ajax').post('/schedules', {
+        data: {
+          schedule: {
+            profile_id: profile,
+            recipe_id: recipe,
+          },
+        },
+      }
+    );
+  },
 
 
   }
