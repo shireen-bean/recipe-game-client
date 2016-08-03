@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   ajax: Ember.inject.service(),
   auth: Ember.inject.service(),
-  // store: Ember.inject.service('store'),
+  flashMessages: Ember.inject.service(),
+
   model (params) {
     return this.get('store').findRecord('recipe', params.id);
   },
@@ -17,12 +18,15 @@ export default Ember.Route.extend({
             recipe_id: this.get('recipe.id'),
           },
         },
-      });
+      })
+      .then(()=>console.log("meal scheduled!"))
+      .catch(()=> {
+        this.get('flashMessages')
+        .danger('Sorry We had a problem adding that recipe to your profile');
+      })
     },
 
     add (recipe, profile) {
-      console.log("recipe to add is", recipe);
-      console.log("profile to add is",profile);
       return this.get('ajax').post('/schedules', {
         data: {
           schedule: {
