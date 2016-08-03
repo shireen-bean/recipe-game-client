@@ -32,6 +32,8 @@ export default Ember.Route.extend({
           schedule: {
             profile_id: profile,
             recipe_id: recipe,
+            favorite: false,
+            complete: false,
           },
         },
       }
