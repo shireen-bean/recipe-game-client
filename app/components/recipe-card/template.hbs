@@ -1,4 +1,4 @@
-{{#each recipes as |recipe|}}
+<!-- {{#each recipes as |recipe|}}
 {{#link-to 'recipe' recipe}}
 <div class="recipe-card col-xs-3">
   <img class="browse-recipe-image" src= {{recipe.image}} >
@@ -6,6 +6,26 @@
   <p>{{recipe.time}}</p>
   <p>{{recipe.level}}</p>
   {{favorite-star recipes=recipes favorite="favorite"}}
+</div>
+{{/link-to}}
+{{/each}} -->
+
+{{#each recipes as |recipe|}}
+{{#link-to 'recipe' recipe}}
+<div class="card col-xs-4 recipe-card">
+  <img class="card-img-top browse-recipe-image" src= {{recipe.image}} alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">{{recipe.title}}</h4>
+    <p class="card-text">{{recipe.ingredients}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Level:{{recipe.level}}</li>
+    <li class="list-group-item">Time:{{recipe.time}} min</li>
+  </ul>
+  <div class="card-block">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
 </div>
 {{/link-to}}
 {{/each}}

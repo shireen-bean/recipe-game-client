@@ -2,12 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
+  ajax: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
+      .then(() => this.get('ajax').post('/profiles', {
+        data: {
+          profile: {
+            user_id: this.get('auth.credentials.id'),
+          },
+        },
+      }))
       .then(() => this.transitionTo('application'))
       .then(() => {
         this.get('flashMessages')
