@@ -1,9 +1,12 @@
 {{#each model as |profile|}}
 <h2>Hi {{profile.given_name}}</h2>
+{{profile/edit-profile profile=profile
+                       edit='edit'
+                                      }}
 <ul>
-    <li>{{profile.id}}</li>
     <li>{{profile.given_name}}</li>
-    <li>{{profile.level}}</li>
+    <li>You are a level: {{profile.level}} chef!
+    </li>
     <li>{{#each profile.recipes as |meal|}}
         <p>{{meal.title}}</p>
         <h5>Your Meals</h5>
@@ -13,8 +16,6 @@
     </li>
 
 
-    {{profile/edit-profile profile=profile
-                           edit='edit'
-                                          }}
+
 </ul>
 {{/each}}
