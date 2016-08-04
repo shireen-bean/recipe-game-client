@@ -3,6 +3,7 @@ import { hasMany } from 'ember-data/relationships';
 
 export default DS.Model.extend({
   title: DS.attr('string'),
+  level: DS.attr('number'),
   directions: DS.attr(),
   time: DS.attr('number'),
   image: DS.attr('string'),
