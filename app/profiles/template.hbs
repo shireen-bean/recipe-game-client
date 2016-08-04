@@ -1,23 +1,3 @@
-<div>
- <!-- required for floating -->
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
-    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-    <li><a href="#profile" data-toggle="tab">Profile</a></li>
-    <li><a href="#messages" data-toggle="tab">Messages</a></li>
-    <li><a href="#settings" data-toggle="tab">Settings</a></li>
-  </ul>
-
-<div class="col-xs-9">
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane active" id="home">Home Tab.</div>
-      <div class="tab-pane" id="profile">Profile Tab.</div>
-      <div class="tab-pane" id="messages">Messages Tab.</div>
-      <div class="tab-pane" id="settings">Settings Tab.</div>
-    </div>
-</div>
-</div>
 
 {{#each model as |profile|}}
 <h2>Hi {{profile.given_name}}</h2>
@@ -28,7 +8,10 @@
     <li>{{profile.given_name}}</li>
     <li>You are a level: {{profile.level}} chef!
     </li>
-
+    <li>You have {{profile.points}} points
+    </li>
+    <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+  
 
 
 </ul>

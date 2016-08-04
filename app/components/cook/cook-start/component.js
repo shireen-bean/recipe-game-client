@@ -13,7 +13,6 @@ export default Ember.Component.extend({
 
   actions:{
     cook () {
-      console.log('the schedule is', this.get('schedule'));
       this.sendAction('cook', this.get('schedule'));
       }
     },

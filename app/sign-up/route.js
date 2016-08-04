@@ -15,6 +15,7 @@ export default Ember.Route.extend({
           profile: {
             user_id: this.get('auth.credentials.id'),
             level: 1,
+            points:0,
             given_name: this.get('auth.credentials.givenname'),
           },
         },

@@ -1,7 +1,11 @@
+<div class="jumbotron">
+  <h1>Coook Book!</h1>
+  <p></p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
-
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
@@ -24,9 +28,6 @@
   </div>
 </nav>
 
-
-
-<h1>COOK BOOK</h1>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}

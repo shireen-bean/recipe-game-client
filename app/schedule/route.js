@@ -8,7 +8,8 @@ export default Ember.Route.extend({
 
   actions: {
     completeMeal (schedule) {
-      console.log('schedule id'+schedule.id)
+      console.log('schedule id'+schedule.id);
+      console.log('profile editing is'+schedule.profile.id)
       return this.get('ajax').patch('/schedules/'+ schedule.id, {
         data: {
           schedule: {
