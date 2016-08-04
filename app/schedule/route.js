@@ -8,8 +8,6 @@ export default Ember.Route.extend({
 
   actions: {
     completeMeal (schedule) {
-      console.log('schedule id'+schedule.id);
-      console.log('profile editing is'+schedule.profile.id)
       return this.get('ajax').patch('/schedules/'+ schedule.id, {
         data: {
           schedule: {
@@ -18,12 +16,10 @@ export default Ember.Route.extend({
         }
       })
       .then(()=> {
-        console.log("reached get request")
         return this.get('ajax').request('/profiles');
       })
       .then((result)=> {
-        console.log("your points are "+ result.profile.points)
-        return result.profile
+        return result.profile;
       })
       .then((my_profile)=>{
         if (my_profile.points < 25){
@@ -73,7 +69,7 @@ export default Ember.Route.extend({
       });
       }
     })
-    .then(()=> console.log("finished!"))
+    .then(()=> this.transitionTo('profiles'))
     },
 
   }
