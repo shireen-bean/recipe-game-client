@@ -1,6 +1,6 @@
 {{#each schedule as |schedule|}}
 
-<div class="card profile-meal-card col-xs-4">
+<div class="card profile-meal-card col-xs-12 col-sm-4">
   <img class="card-img-top" src= {{schedule.recipe.image}} alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">{{schedule.recipe.title}}</h4>
@@ -12,18 +12,27 @@
                                     cook='cook'
                                   }}
     </li>
+    {{#if schedule.favorite}}
     <li class="list-group-item">Favorite: {{schedule.favorite}}</li>
+    {{else}}
     <li class="list-group-item">{{favorite-meal
                                   schedule=schedule
                                   favoriteMeal="favoriteMeal"
                                 }}
     </li>
+    {{/if}}
+
     <li class="list-group-item">Completed: {{schedule.complete}}</li>
+    {{#if schedule.complete}}
+
+    {{else}}
     <li class="list-group-item">{{delete-schedule
                                   schedule=schedule
                                   deleteSchedule="deleteSchedule"
                                 }}
     </li>
+    {{/if}}
+
   </ul>
 </div>
 {{/each}}
