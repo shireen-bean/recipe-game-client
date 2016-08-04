@@ -1,5 +1,8 @@
-<h5> Singular schedule page</h5>
-
-
+<h3>Let's start cooking {{model.recipe.title}}</h3>
 
 <img src= {{model.recipe.image}}>
+
+<h5>Step 1</h5>
+<p>{{model.recipe.ingredients}}</p>
+<p>{{ model.recipe.directions }}</p>
+{{complete-meal schedule=model completeMeal="completeMeal"}}
