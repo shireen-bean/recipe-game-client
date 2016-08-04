@@ -5,13 +5,14 @@
                        edit='edit'
                                       }}
 <ul>
-    <li>{{profile.given_name}}</li>
-    <li>You are a level: {{profile.level}} chef!
-    </li>
+    <h2>{{profile.given_name}}</h2>
+
+    <p>You are a {{calculateLevel profile.level}}</p>
+
     <li>You have {{profile.points}} points
     </li>
     <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-  
+
 
 
 </ul>
