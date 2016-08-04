@@ -1,10 +1,28 @@
-.recipe-card{
-  border: 2px solid red;
+.jumbotron{
+  background: url('https://static.pexels.com/photos/76093/pexels-photo-76093-large.jpeg');
+  color: white;
+}
+
+.recipe-card, .profile-meal-card{
+  border-radius: 18px 18px 18px 18px;
+-moz-border-radius: 18px 18px 18px 18px;
+-webkit-border-radius: 18px 18px 18px 18px;
+border: 0.5px solid black;
+
+-webkit-box-shadow: 14px 13px 39px -8px rgba(0,0,0,0.68);
+-moz-box-shadow: 14px 13px 39px -8px rgba(0,0,0,0.68);
+box-shadow: 14px 13px 39px -8px rgba(0,0,0,0.68);
 }
 
 .profile-meal-card {
-  border: 3px solid blue;
   & img {
     border: none;
+  }
+}
+
+nav {
+  background-color: black;
+  & a {
+    color: white;
   }
 }

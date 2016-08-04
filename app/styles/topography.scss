@@ -1,12 +1,16 @@
-// .recipe-card {
-//   & img {
-//     width:100%;
-//   }
-// }
+.jumbotron {
+  margin-bottom: 0;
 
+}
+
+.container-fluid {
+  width: 100%;
+}
 
 .recipe-card {
-  // height: 500px;
+  height: 500px;
+  // width: 80%;
+  margin: 5% 0%;
   & .browse-recipe-image {
     width: 100%;
   }
@@ -25,7 +29,7 @@
 }
 
 .profile-meal-card {
-  height: 500px;
+  // height: 500px;
   & img {
     width: 100%;
   }

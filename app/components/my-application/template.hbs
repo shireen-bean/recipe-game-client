@@ -1,15 +1,18 @@
 <div class="jumbotron">
   <h1>Coook Book!</h1>
   <p></p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  {{#if isAuthenticated}}
+  {{else}}
+  <p>{{#link-to "sign-up"}}<a class="btn btn-primary btn-lg" href="#" role="button">Sign Up!</a>{{/link-to}}</p>
+  {{/if}}
 </div>
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <div class="container-fluid">
     {{navbar-header}}
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "profiles"}}Profile{{/link-to}}</li>
+
         <li>{{#link-to "schedules"}}Schedules{{/link-to}}</li>
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
@@ -17,7 +20,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+        <li>{{#link-to "profiles"}}Profile{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>

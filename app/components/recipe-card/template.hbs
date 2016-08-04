@@ -1,18 +1,7 @@
-<!-- {{#each recipes as |recipe|}}
-{{#link-to 'recipe' recipe}}
-<div class="recipe-card col-xs-3">
-  <img class="browse-recipe-image" src= {{recipe.image}} >
-  <h5>{{recipe.title}}</h5>
-  <p>{{recipe.time}}</p>
-  <p>{{recipe.level}}</p>
-  {{favorite-star recipes=recipes favorite="favorite"}}
-</div>
-{{/link-to}}
-{{/each}} -->
 
 {{#each recipes as |recipe|}}
 {{#link-to 'recipe' recipe}}
-<div class="card col-xs-4 recipe-card">
+<div class="card col-xs-12 col-sm-4 recipe-card">
   <img class="card-img-top browse-recipe-image" src= {{recipe.image}} alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">{{recipe.title}}</h4>
@@ -24,7 +13,7 @@
   </ul>
   <div class="card-block">
     <!-- {{favorite-star recipes=recipes favorite="favorite"}} -->
-    <a href="#" class="card-link">Another link</a>
+    <!-- <a href="#" class="card-link">Another link</a> -->
   </div>
 </div>
 {{/link-to}}
