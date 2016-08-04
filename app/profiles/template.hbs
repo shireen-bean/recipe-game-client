@@ -2,18 +2,23 @@
 {{#each model as |profile|}}
 <h2>Hi {{profile.given_name}}</h2>
 {{profile/edit-profile profile=profile
-                       edit='edit'
+                       edit='editName'
                                       }}
+
+<!-- {{profile/edit-picture profile=profile
+                       editPicture='editPicture'
+                                      }} -->
+
+
 <ul>
     <h2>{{profile.given_name}}</h2>
-
     <p>You are a {{calculateLevel profile.level}}</p>
-
     <li>You have {{profile.points}} points
     </li>
     <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-
-
-
 </ul>
+{{/each}}
+
+{{#each model.recipes as |recipe|}}
+<p>{{recipe.id}}</p>
 {{/each}}

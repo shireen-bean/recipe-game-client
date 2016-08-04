@@ -25,8 +25,12 @@ export default Ember.Route.extend({
 
   actions: {
 
-    edit (profile) {
+    editName (profile) {
       this.transitionTo('profiles/edit', profile);
+    },
+
+    editPicture (profile) {
+      this.transitionTo('profiles/edit-picture', profile);
     },
 
     cook (schedule) {
