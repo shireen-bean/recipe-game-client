@@ -64,6 +64,7 @@ export default Ember.Route.extend({
           profile: {
             points: my_profile.points + 5,
             level: 5,
+            chef: true,
           },
         },
       });
