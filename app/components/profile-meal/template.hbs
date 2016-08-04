@@ -13,6 +13,11 @@
                                   }}
     </li>
     <li class="list-group-item">Favorite: {{schedule.favorite}}</li>
+    <li class="list-group-item">{{favorite-meal
+                                  schedule=schedule
+                                  favoriteMeal="favoriteMeal"
+                                }}
+    </li>
     <li class="list-group-item">Completed: {{schedule.complete}}</li>
     <li class="list-group-item">{{delete-schedule
                                   schedule=schedule

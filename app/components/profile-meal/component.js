@@ -12,8 +12,11 @@ export default Ember.Component.extend({
     },
 
     deleteSchedule (schedule) {
-      console.log('schedule id'+schedule.id);
-      return this.get('ajax').del('/schedules/'+ schedule.id)
+      this.sendAction('deleteSchedule', schedule);
+    },
+
+    favoriteMeal (schedule) {
+        this.sendAction('favoriteMeal', schedule);
     },
 
   }
