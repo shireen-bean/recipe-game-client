@@ -12,8 +12,13 @@
                                     cook='cook'
                                   }}
     </li>
-    <li class="list-group-item">Favorite</li>
+    <li class="list-group-item">Favorite: {{schedule.favorite}}</li>
     <li class="list-group-item">Completed: {{schedule.complete}}</li>
+    <li class="list-group-item">{{delete-schedule
+                                  schedule=schedule
+                                  deleteSchedule="deleteSchedule"
+                                }}
+    </li>
   </ul>
 </div>
 {{/each}}
