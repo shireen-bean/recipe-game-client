@@ -7,6 +7,18 @@ export default Ember.Component.extend({
     return this.get('store').queryRecord('profile', { user: this.get('user.id')});
   }),
 
+  isAble: Ember.computed('profile', 'recipe', function(){
+    this.get('profile').then((profile)=>{
+      console.log("the profile of isAble is", this.get('profile.level'))
+      console.log('the recipe level is ', this.get('recipe.level'))
+      if (this.get('profile.level') >= this.get('recipe.level')){
+        return true;
+      } else {
+        return false;
+      }
+    })
+    }),
+
   actions: {
     add () {
       this.get('profile').then((profile) => {

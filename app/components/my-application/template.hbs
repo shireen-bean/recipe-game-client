@@ -2,6 +2,7 @@
   <h1>Coook Book!</h1>
   <p></p>
   {{#if isAuthenticated}}
+  <h3>Hi, {{profile.given_name}}</h3>
   {{else}}
   <p>{{#link-to "sign-up"}}<a class="btn btn-primary btn-lg" href="#" role="button">Sign Up!</a>{{/link-to}}</p>
   {{/if}}

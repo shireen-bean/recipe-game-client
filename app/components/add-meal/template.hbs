@@ -1,3 +1,7 @@
+{{#if isAble}}
 <button type="submit" profile=profile recipe=recipe class="btn btn-primary" {{action "add"}}>
   Cook This
 </button>
+{{else}}
+<p>You have not yet unlocked this level</p>
+{{/if}}
