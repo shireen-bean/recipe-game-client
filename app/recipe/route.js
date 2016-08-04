@@ -20,6 +20,7 @@ export default Ember.Route.extend({
         },
       })
       .then(()=>console.log("meal scheduled!"))
+      .then(()=> this.transitionTo('recipes'))
       .catch(()=> {
         this.get('flashMessages')
         .danger('Sorry We had a problem adding that recipe to your profile');
@@ -36,8 +37,8 @@ export default Ember.Route.extend({
             complete: false,
           },
         },
-      }
-    );
+      })
+      .then(()=> this.transitionTo('recipes'))
   },
 
 

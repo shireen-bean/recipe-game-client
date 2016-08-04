@@ -23,7 +23,8 @@
     display: block;
   }
   & .view-recipe-image {
-    width: 50%;
+    max-height: 500px;
+    margin: 0 auto;
     margin: 0 auto;
   }
 }

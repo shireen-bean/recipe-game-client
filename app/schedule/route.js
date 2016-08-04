@@ -13,10 +13,28 @@ export default Ember.Route.extend({
       return this.get('ajax').patch('/schedules/'+ schedule.id, {
         data: {
           schedule: {
-            complete: true,
+            complete: false,
           }
         }
       })
+      .then(()=> {
+        console.log("reached get request")
+        return this.get('ajax').request('/profiles');
+      })
+      .then((result)=> {
+        console.log("your points are "+ result.profile.points)
+        return result.profile
+      })
+      .then((my_profile)=>{
+        return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+        data: {
+          profile: {
+            points: my_profile.points + 5,
+          },
+        },
+      })
+    })
+    .then((result)=> console.log(result))
     },
 
   }
