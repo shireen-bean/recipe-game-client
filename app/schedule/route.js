@@ -26,15 +26,54 @@ export default Ember.Route.extend({
         return result.profile
       })
       .then((my_profile)=>{
+        if (my_profile.points < 25){
         return this.get('ajax').patch('/profiles/'+ my_profile.id, {
         data: {
           profile: {
             points: my_profile.points + 5,
+            level: 1,
           },
         },
-      })
+      });
+    } else if (my_profile.points < 50) {
+      return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+      data: {
+        profile: {
+          points: my_profile.points + 5,
+          level: 2,
+        },
+      },
+    });
+    } else if (my_profile.points < 75) {
+      return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+      data: {
+        profile: {
+          points: my_profile.points + 5,
+          level: 3,
+        },
+      },
+    });
+  } else if (my_profile.points < 100) {
+      return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+      data: {
+        profile: {
+          points: my_profile.points + 5,
+          level: 4,
+        },
+      },
+    });
+  } else if (my_profile.points >= 125) {
+        return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+        data: {
+          profile: {
+            points: my_profile.points + 5,
+            level: 5,
+          },
+        },
+      });
+      }
     })
-    .then((result)=> console.log(result))
+    .then(()=> console.log("finished!"))
     },
 
   }
