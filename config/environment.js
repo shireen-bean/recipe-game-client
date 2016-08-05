@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    modulePrefix: 'cook-book',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -40,8 +40,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
-  }
+  ENV.baseURL = '/';
+  ENV.locationType = 'hash';
+  ENV.apiHost = 'https://git.heroku.com/cookbook-game.git'
+}
 
   return ENV;
 };
