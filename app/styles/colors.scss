@@ -1,3 +1,6 @@
+$tomato: #FF6347;
+$turquoise: #40E0D0;
+
 .jumbotron{
   background: url('https://static.pexels.com/photos/76093/pexels-photo-76093-large.jpeg');
   color: white;
@@ -33,17 +36,28 @@ nav {
   color: red;
 }
 
-.cook-button {
-  background:none;
-  border:2px solid red;
-  color: red;
+
+.home-meal{
+  background: none;
+  background-color: black;
+  border:2px solid white;
+  color: white;
 }
 
-.home-button{
-  background:none;
-  border:2px solid red;
-  color: red;
-}
 .home-image {
   color: white;
+}
+
+.profile-meal-button {
+  background: none;
+  background-color: $tomato;
+  border:none;
+  color: $turquoise;
+}
+
+.back{
+  background: none;
+  background-color: $turquoise;
+  border:none;
+  color: $tomato;
 }

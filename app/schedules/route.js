@@ -15,11 +15,7 @@ export default Ember.Route.extend({
 
     deleteSchedule (schedule) {
       return this.get('ajax').del('/schedules/'+ schedule.id)
-      .then(() => {
-        this.get('flashMessages')
-        .success('Successfully removed recipe');
-      })
-      .finally(()=>this.refresh());
+      .finally((result)=>this.refresh());
     },
 
     favoriteMeal (schedule) {

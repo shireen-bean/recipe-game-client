@@ -22,8 +22,9 @@
     </li>
     {{/if}}
 
-    <li class="list-group-item">Completed: {{schedule.complete}}</li>
     {{#if schedule.complete}}
+    <li class="list-group-item"><img id="favorite-star" src="http://i.stack.imgur.com/5hETE.gif"></li>
+
 
     {{else}}
     <li class="list-group-item">{{delete-schedule

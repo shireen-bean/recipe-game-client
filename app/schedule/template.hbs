@@ -5,8 +5,9 @@
 {{#link-to 'schedules'}}<button class='back back-to-schedules'>Back</button>{{/link-to}}
 <img class="profile-meal-image" src= {{model.recipe.image}}>
 
-<h5>Step 1</h5>
-<p>{{model.recipe.ingredients}}</p>
-<p>{{model.recipe.directions }}</p>
+<h3>Ingredients: </h3>
+  <h5>{{model.recipe.ingredients}}</h5>
+  <h3>Directions: </h3>
+    <h5>{{forLoop model.recipe.directions}}</h5>
 {{complete-meal schedule=model completeMeal="completeMeal"}}
 </div>

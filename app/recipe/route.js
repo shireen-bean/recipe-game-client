@@ -38,7 +38,7 @@ export default Ember.Route.extend({
           },
         },
       })
-      .then(()=> this.transitionTo('recipes'))
+      .then(()=> this.transitionTo('schedules'))
   },
 
 

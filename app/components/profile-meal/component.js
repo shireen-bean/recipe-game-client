@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   ajax: Ember.inject.service(),
 
-
   actions: {
     cook (schedule) {
       this.sendAction('cook', schedule);

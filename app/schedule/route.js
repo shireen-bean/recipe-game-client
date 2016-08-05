@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       return this.get('ajax').patch('/schedules/'+ schedule.id, {
         data: {
           schedule: {
-            complete: false,
+            complete: true,
           }
         }
       })

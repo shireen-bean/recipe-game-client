@@ -22,5 +22,22 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   & h5 {
     font-size: 48px;
+    text-align: left;
   }
+}
+
+.profile-meal-button {
+  font-family: $bubble;
+}
+
+.navbar {
+  font-family: $bubble;
+}
+
+.home-meal {
+  font-family: $bubble;
+}
+
+.back{
+  font-family: $bubble;
 }
