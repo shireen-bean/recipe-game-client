@@ -24,7 +24,7 @@ export default Ember.Route.extend({
     )
     console.log('profile created')
     })
-      .then(() => this.transitionTo('application'))
+      .then(() => this.transitionTo('home'))
       .then(() => {
         this.get('flashMessages')
         .success('Successfully signed-up! You have also been signed-in.');

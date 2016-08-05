@@ -1,7 +1,7 @@
 <div class="view-profiles">
 {{#each model as |profile|}}
   <h3>How's it cooking {{profile.given_name}}?</h3>
-  <li>You have {{profile.points}} points</li>
+  <h4>You have {{profile.points}} points</h4>
 {{profile/edit-profile profile=profile
                        edit='editName'
                                       }}

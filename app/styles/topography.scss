@@ -16,6 +16,11 @@
   }
 }
 
+.navbar {
+  margin: 0 0;
+}
+
+
 .view-recipe {
   width: 80%;
   margin: 0 auto;
@@ -58,6 +63,12 @@
 
 #home2 {
   background-image: url('https://static.pexels.com/photos/8817/food-dinner-pasta-broccoli-large.jpg');
+  background-size: cover;
+  background-repeat: none;
+}
+
+#home3 {
+  background-image: url('https://static.pexels.com/photos/7765/food-large.jpg');
   background-size: cover;
   background-repeat: none;
 }

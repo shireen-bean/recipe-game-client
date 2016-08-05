@@ -22,6 +22,7 @@ Router.map(function () {
   this.route('schedule', {path: '/schedules/:id'});
   this.route('schedules');
   this.route('home');
+  this.route('chef');
 });
 
 export default Router;

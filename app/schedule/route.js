@@ -58,7 +58,7 @@ export default Ember.Route.extend({
         },
       },
     });
-  } else if (my_profile.points >= 125) {
+  } else if (my_profile.points < 125) {
         return this.get('ajax').patch('/profiles/'+ my_profile.id, {
         data: {
           profile: {
@@ -68,6 +68,16 @@ export default Ember.Route.extend({
           },
         },
       });
+      } else {
+          return this.get('ajax').patch('/profiles/'+ my_profile.id, {
+          data: {
+            profile: {
+              points: my_profile.points + 5,
+              level: 5,
+              chef: true,
+            },
+          },
+        });
       }
     })
     .then(()=> this.transitionTo('profiles'))

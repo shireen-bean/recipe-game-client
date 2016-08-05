@@ -18,6 +18,9 @@
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
         <li>{{#link-to "recipes"}}Recipes{{/link-to}}</li>
+        {{#if isChef}}
+          <li>{{#link-to "chef"}}Chef{{/link-to}}</li>
+        {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
@@ -38,5 +41,7 @@
 {{/each}}
 
 <div class="col-md-8 col-md-offset-2">
-  {{outlet}}
+
 </div>
+
+{{outlet}}
