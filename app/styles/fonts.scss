@@ -1,3 +1,5 @@
+$bubble: 'Fredoka One', cursive;
+
 .view-profiles {
   text-align: center;
   .score-status {
@@ -6,6 +8,19 @@
 }
 
 .home-image {
-  font-size: 52px;
   text-align: center;
+  & h5 {
+    font-size: 52px;;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $bubble;
+}
+
+#view-schedules{
+  text-align: center;
+  & h5 {
+    font-size: 48px;
+  }
 }
