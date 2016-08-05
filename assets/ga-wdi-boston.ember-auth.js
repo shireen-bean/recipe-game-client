@@ -3913,11 +3913,11 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
             "loc": {
               "source": null,
               "start": {
-                "line": 17,
+                "line": 9,
                 "column": 8
               },
               "end": {
-                "line": 17,
+                "line": 9,
                 "column": 53
               }
             },
@@ -3952,7 +3952,7 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
               "column": 0
             },
             "end": {
-              "line": 19,
+              "line": 11,
               "column": 0
             }
           },
@@ -3984,15 +3984,7 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
           var el2 = dom.createTextNode(" points");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment(" {{profile/edit-picture profile=profile\n                       editPicture='editPicture'\n                                      }} ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n\n");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("ul");
           var el2 = dom.createTextNode("\n    ");
@@ -4024,16 +4016,15 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var element0 = dom.childAt(fragment, [9]);
-          var morphs = new Array(5);
+          var element0 = dom.childAt(fragment, [5]);
+          var morphs = new Array(4);
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 1, 1);
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 1, 1);
-          morphs[2] = dom.createMorphAt(fragment, 5, 5, contextualElement);
-          morphs[3] = dom.createMorphAt(dom.childAt(element0, [3]), 1, 1);
-          morphs[4] = dom.createMorphAt(dom.childAt(element0, [5]), 0, 0);
+          morphs[2] = dom.createMorphAt(dom.childAt(element0, [3]), 1, 1);
+          morphs[3] = dom.createMorphAt(dom.childAt(element0, [5]), 0, 0);
           return morphs;
         },
-        statements: [["content", "profile.given_name", ["loc", [null, [3, 23], [3, 45]]]], ["content", "profile.points", ["loc", [null, [4, 15], [4, 33]]]], ["inline", "profile/edit-profile", [], ["profile", ["subexpr", "@mut", [["get", "profile", ["loc", [null, [5, 31], [5, 38]]]]], [], []], "edit", "editName"], ["loc", [null, [5, 0], [7, 40]]]], ["inline", "calculateLevel", [["get", "profile.level", ["loc", [null, [16, 56], [16, 69]]]]], [], ["loc", [null, [16, 39], [16, 71]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [17, 8], [17, 65]]]]],
+        statements: [["content", "profile.given_name", ["loc", [null, [3, 23], [3, 45]]]], ["content", "profile.points", ["loc", [null, [4, 15], [4, 33]]]], ["inline", "calculateLevel", [["get", "profile.level", ["loc", [null, [8, 56], [8, 69]]]]], [], ["loc", [null, [8, 39], [8, 71]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [9, 8], [9, 65]]]]],
         locals: ["profile"],
         templates: [child0]
       };
@@ -4046,11 +4037,11 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
           "loc": {
             "source": null,
             "start": {
-              "line": 21,
+              "line": 13,
               "column": 0
             },
             "end": {
-              "line": 23,
+              "line": 15,
               "column": 0
             }
           },
@@ -4075,7 +4066,7 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 0, 0);
           return morphs;
         },
-        statements: [["content", "recipe.id", ["loc", [null, [22, 3], [22, 16]]]]],
+        statements: [["content", "recipe.id", ["loc", [null, [14, 3], [14, 16]]]]],
         locals: ["recipe"],
         templates: []
       };
@@ -4083,7 +4074,8 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
     return {
       meta: {
         "fragmentReason": {
-          "name": "triple-curlies"
+          "name": "missing-wrapper",
+          "problems": ["multiple-nodes", "wrong-type"]
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -4116,6 +4108,14 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment(" {{profile/edit-profile profile=profile\n                       edit='editName'\n                                      }} ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment(" {{profile/edit-picture profile=profile\n                       editPicture='editPicture'\n                                      }} ");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
@@ -4127,7 +4127,7 @@ define("ga-wdi-boston.ember-auth/profiles/template", ["exports"], function (expo
         morphs[1] = dom.createMorphAt(element1, 3, 3);
         return morphs;
       },
-      statements: [["block", "each", [["get", "model", ["loc", [null, [2, 8], [2, 13]]]]], [], 0, null, ["loc", [null, [2, 0], [19, 9]]]], ["block", "each", [["get", "model.recipes", ["loc", [null, [21, 8], [21, 21]]]]], [], 1, null, ["loc", [null, [21, 0], [23, 9]]]]],
+      statements: [["block", "each", [["get", "model", ["loc", [null, [2, 8], [2, 13]]]]], [], 0, null, ["loc", [null, [2, 0], [11, 9]]]], ["block", "each", [["get", "model.recipes", ["loc", [null, [13, 8], [13, 21]]]]], [], 1, null, ["loc", [null, [13, 0], [15, 9]]]]],
       locals: [],
       templates: [child0, child1]
     };
