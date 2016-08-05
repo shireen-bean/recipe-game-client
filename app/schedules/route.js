@@ -30,7 +30,7 @@ export default Ember.Route.extend({
           }
         }
       })
-      .finally(()=>this.refresh());
+      .finally((result)=>this.refresh());
     },
 
   }

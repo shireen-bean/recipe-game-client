@@ -1,6 +1,7 @@
-
+<div class="view-profiles">
 {{#each model as |profile|}}
-<h2>Hi {{profile.given_name}}</h2>
+  <h3>How's it cooking {{profile.given_name}}?</h3>
+  <li>You have {{profile.points}} points</li>
 {{profile/edit-profile profile=profile
                        edit='editName'
                                       }}
@@ -11,10 +12,8 @@
 
 
 <ul>
-    <h2>{{profile.given_name}}</h2>
-    <p>You are a {{calculateLevel profile.level}}</p>
-    <li>You have {{profile.points}} points
-    </li>
+    <img class="hat-icon" src="https://d30y9cdsu7xlg0.cloudfront.net/png/64861-200.png">
+    <h2 class="score-status">You are a {{calculateLevel profile.level}}</h2>
     <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
 </ul>
 {{/each}}
@@ -22,3 +21,4 @@
 {{#each model.recipes as |recipe|}}
 <p>{{recipe.id}}</p>
 {{/each}}
+</div>

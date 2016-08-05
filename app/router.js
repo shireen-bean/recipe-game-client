@@ -21,6 +21,7 @@ Router.map(function () {
   this.route('recipe', {path: '/recipes/:id'});
   this.route('schedule', {path: '/schedules/:id'});
   this.route('schedules');
+  this.route('home');
 });
 
 export default Router;
