@@ -4,9 +4,11 @@ export function calculateLevel(param) {
   if(param == 1) {
     return "Starving College Kid";
   } else if (param == 2) {
-    return "Novice Chef";
+    return "Chef's Young Prodige";
+  } else if (param == 3) {
+    return "Almost-adult";
   } else if (param == 4) {
-    return "Advanced Chef";
+    return "Wife/Husband Material";
   } else {
     return "Executive Chef";
   }
